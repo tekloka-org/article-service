@@ -33,7 +33,7 @@ public class ArticleController {
 	     @ApiResponse(responseCode = "500", description = "Internal Server Error")
 	})
 	@PostMapping(path = "/save", produces = MediaType.APPLICATION_JSON_VALUE)
-	//@AccessPermissions(value = { PermissionConstants.SAVE_ARTICLE })
+	@AccessPermissions(value = PermissionConstants.SAVE_ARTICLE)
 	public ResponseEntity<Object> save(HttpServletRequest request, @RequestBody ArticleDTO articleDTO) {
 		return articleService.save(request, articleDTO);
 	}
@@ -44,7 +44,7 @@ public class ArticleController {
 	     @ApiResponse(responseCode = "500", description = "Internal Server Error")
 	})
 	@PostMapping(path = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
-	//@AccessPermissions(value = { PermissionConstants.UPDATE_ARTICLE })
+	@AccessPermissions(value = PermissionConstants.UPDATE_ARTICLE)
 	public ResponseEntity<Object> update(HttpServletRequest request, @RequestBody ArticleDTO articleDTO) {
 		return articleService.update(request, articleDTO);
 	}
@@ -55,6 +55,7 @@ public class ArticleController {
 	     @ApiResponse(responseCode = "500", description = "Internal Server Error")
 	})
 	@PostMapping(path = "/delete", produces = MediaType.APPLICATION_JSON_VALUE)
+	@AccessPermissions(value = PermissionConstants.DELETE_ARTICLE)
 	public ResponseEntity<Object> delete(HttpServletRequest request, @RequestBody ArticleDTO articleDTO) {
 		return articleService.delete(request, articleDTO);
 	}

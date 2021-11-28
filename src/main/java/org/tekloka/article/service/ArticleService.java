@@ -27,4 +27,6 @@ public interface ArticleService {
 
 	ResponseEntity<Object> getArticle(HttpServletRequest request, String userId, String articleUrlPath);
 
+	ResponseEntity<Object> checkServiceStatus();
+
 }

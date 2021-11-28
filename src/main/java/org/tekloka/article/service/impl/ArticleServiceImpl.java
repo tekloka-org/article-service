@@ -141,4 +141,10 @@ public class ArticleServiceImpl implements ArticleService {
 		}
 	}
 
+	@Override
+	public ResponseEntity<Object> checkServiceStatus() {
+		Map<String, Object> dataMap = new HashMap<>();
+		return responseUtil.generateResponse(dataMap, ResponseConstants.ARTICLE_SERVICE_ACCESSIBLE);
+	}
+
 }

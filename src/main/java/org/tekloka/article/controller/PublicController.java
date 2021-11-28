@@ -24,6 +24,11 @@ public class PublicController {
 		this.artilceService = artilceService;
 	}
 	
+	@GetMapping(path = "/check-service-status", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> checkServiceStatus() {
+		return artilceService.checkServiceStatus();
+	}
+	
 	@Operation(summary = "Get all articles")
 	@ApiResponses(value = {
 	     @ApiResponse(responseCode = "200", description = "Articles found"),
