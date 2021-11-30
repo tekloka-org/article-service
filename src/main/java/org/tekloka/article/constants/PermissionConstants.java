@@ -7,5 +7,4 @@ public final class PermissionConstants {
 	public static final String UPDATE_ARTICLE = "UPDATE_ARTICLE";
 	public static final String DELETE_ARTICLE = "DELETE_ARTICLE";
 	
-	
 }
