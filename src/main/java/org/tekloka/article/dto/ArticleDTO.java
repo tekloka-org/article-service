@@ -12,5 +12,7 @@ public class ArticleDTO {
 	private String urlPath;
 	private String content;
 	private String authorId;
-	
+	private String authorName;
+	private String createdOn;
+	private String modifiedOn;
 }
